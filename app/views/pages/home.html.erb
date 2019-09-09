@@ -3,7 +3,7 @@
     <div class="banner" style="background-image: url(<%= image_path "banner4.jpg" %>)">
       <div class="home-header">
         <h1><strong>Houseplant killer?</strong></h1>
-        <p>Plantis helps you look after your house plants by reminding you</p>
+        <p>Jungle helps you look after your house plants by reminding you</p>
         <p>when each plant is thirsty.</p>
         <% if user_signed_in? && current_user.user_plants.count > 0 %>
           <%= link_to 'Visit your jungle', user_plants_path, class: 'btn btn-primary btn-banner' %>
