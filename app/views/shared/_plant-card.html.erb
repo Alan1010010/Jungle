@@ -1,0 +1,36 @@
+  <% @plants.each do |plant| %>
+    <div class="card-product" data-toggle="modal" data-target="#plant-modal-<%= plant.id %>">
+      <%= cl_image_tag ( plant.photo ) %>
+      <div class="card-product-infos">
+        <p id="plant-name"><%= plant.name %></p>
+        <p id="plant-latin-name"><%= plant.latin_name %></p>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="plant-modal-<%= plant.id %>">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" >Add <%= plant.name %></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <%= simple_form_for(@user_plant, html: { novalidate: false, autocomplete: "off" }) do |f| %>
+            <div class="modal-body">
+              <div class="form-inputs">
+                <%= f.input :nickname, required: true  %>
+                <%= f.input :last_watered, as: :string, required: true %>
+                <%= f.input :plant_id, as: "hidden", input_html: { value: plant.id } %>
+                <%= f.input :photo, class: "insert-photo", required: true %>
+                <%= f.input :photo_cache, as: "hidden" %>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <%= f.submit "Add plant", :class => "btn btn-primary" %>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>

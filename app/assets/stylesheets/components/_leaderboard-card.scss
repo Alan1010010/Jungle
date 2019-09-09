@@ -1,0 +1,56 @@
+.card-leader {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  max-width: 80%;
+  height: 120px;
+  margin-left: 40px;
+  border-radius: 3px;
+
+}
+
+.card-leader .card-leader-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-leader h3 {
+  margin: 1px;
+  line-height: 1.4;
+}
+
+.card-leader p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+#logo-card {
+  margin: 5px;
+  font-size: 20px;
+  color: $primary-color;
+}
+
+.ranking {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: $primary-color;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 12px;
+  align-items: center;
+}

@@ -1,0 +1,158 @@
+// h2 {
+//   text-align: center;
+// }
+
+.user-badge-container {
+  text-align: center
+}
+
+.badge-user-show {
+  margin-left: 0px !important;
+  position: relative !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px !important;
+  border-color: $primary !important;
+  padding: 7px !important;
+}
+
+.user-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.banner-my-seeds {
+  // background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("seeds.jpeg");
+  height: 575px;
+  background-position: center;
+  background-size: cover;
+}
+
+.user-profile-header {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+  padding-top: 130px;
+
+}
+
+.avatar-profile {
+  border-radius: 50%;
+  border: 2px solid rgb(220,220,220);
+  box-shadow: 1px 1px 5px rgb(30,30,30);
+  object-fit: cover;
+}
+
+.level {
+  color: white;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  color: white;
+  font-weight: normal;
+  text-shadow: none;
+  border: 1px solid white;
+  font-size: 18px;
+  position: absolute;
+  margin-left: 150px;
+  padding: 5px;
+}
+
+.current-seeds {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(30,30,30);
+}
+
+.progress {
+  width: 500px;
+  margin: auto;
+  height: 25px;
+  font-size: 18px;
+  position: relative;
+  overflow: visible !important;
+  border-radius: 3px;
+}
+.w3-container {
+  border-radius: 5px;
+  margin: auto;
+  width: 500px;
+  // align-self: center;
+  // justify-content: center;
+}
+.w3-green {
+  align-left: 0px;
+  border-radius: 5px;
+}
+
+.w3-light-grey {
+  border-radius: 5px;
+  margin: auto;
+
+}
+
+.progress-bar {
+  position: absolute;
+  height: 98%;
+  border-radius: 3px;
+}
+
+.level-line {
+  // align: center;
+  // width: 500px;
+  position: relative;
+  margin-top:-20px;
+  z-index: 1;
+  font-size:12px;
+}
+
+.label-txt {
+  float: left;
+  position: absolute;
+}
+
+.label-line {
+  float: right;
+  background: #000;
+  height:50px;
+  width: 1px;
+  margin-left: -4px;
+  opacity: 0.3;
+}
+
+.content-block{
+  display: flex;
+}
+
+.content-right {
+  width: 50%;
+  margin-top: 40px;
+
+}
+
+.content-left {
+  width: 50%;
+  flex-grow: 0;
+  margin-top: 40px;
+}
+
+.activity-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.discover {
+  margin-top: 20px;
+}
+
+.leaderboard-header {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}

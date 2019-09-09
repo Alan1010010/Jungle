@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header plant-property-header" id="heading<%= property.split(" ")[0] %>">
+    <h2 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<%= property.split(" ")[0] %>" aria-expanded="false" aria-controls="collapse<%= property.split(" ")[0] %>">
+        <%= property %>
+      </button>
+    </h2>
+  </div>
+  <div id="collapse<%= property.split(" ")[0] %>" class="collapse" aria-labelledby="heading<%= property.split(" ")[0] %>" data-parent="#plantProperties">
+    <div class="card-body">
+      <%= info %>
+    </div>
+  </div>
+</div>

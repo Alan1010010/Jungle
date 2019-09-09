@@ -1,0 +1,43 @@
+/*
+*= require fullcalendar
+*/
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+  min-height: calc(100vh - 160px);
+}
+
+.footer-wrap {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+
+

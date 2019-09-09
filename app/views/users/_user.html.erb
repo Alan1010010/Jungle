@@ -1,0 +1,12 @@
+<div data-user=<%= user.id %>>
+  <%= link_to user.email, user_plants_path(user: user) %>
+  <% if current_user.is_following?(user.id) %>
+    <%= link_to unfollow_user_path(user.id), method: :post, remote: true do %>
+      <i class="fas fa-user-minus"></i>
+    <% end %>
+  <% else %>
+    <%= link_to follow_user_path(user.id), method: :post, remote: true do %>
+      <i class="fas fa-user-plus"></i>
+    <% end %>
+  <% end %>
+</div>

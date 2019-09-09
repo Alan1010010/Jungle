@@ -1,0 +1,29 @@
+<h2 class="form-header">Sign up</h2>
+<div class="form">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :firstname, label:"First name", required: true %>
+      <%= f.input :lastname, label:"Last name", required: true %>
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :photo, class: "insert-photo" %>
+      <%= f.input :photo_cache, as: :hidden %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %><span class="other-btn"><%= render "devise/shared/links" %></span>
+    </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,19 @@
+<a href="/user_plants?user=<%= user.id %>">
+<div class="card-leader">
+  <div class="avatar-parent">
+    <%= render './shared/user-avatar-large', user: user %>
+    <div class="ranking">
+      <span class="avatar-rank"><%= (index + 1).ordinalize %></span>
+    </div>
+  </div>
+  <div class="card-leader-content">
+    <div class="leader-name">
+    <h3><small><%= user.firstname %> <%= user.lastname %></small></h3>
+    </div>
+    <div class="stats">
+      <p>Level <%= user.level %></p>
+      <p><%= user.seeds %><i id="logo-card" class="fas fa-seedling"></i></p>
+    </div>
+  </div>
+</div>
+</a>

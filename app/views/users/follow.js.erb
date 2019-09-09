@@ -1,0 +1,10 @@
+// console.log('<%= @index %>');
+<% if @index %>
+document.getElementById('follow-unfollow').innerHTML = '<%= j render "user_plants/follow-unfollow" %>'
+<% else %>
+function renderUser(userHTML) {
+  const user = document.querySelector("[data-user='<%= @user.id %>']");
+  user.innerHTML = userHTML;
+}
+renderUser('<%= j render "shared/user-card", user: @user %>');
+<% end %>

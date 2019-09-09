@@ -1,0 +1,11 @@
+<div class="water-anyway">
+  <div class="modal-body">
+        <p><i class="fas fa-calendar-day"></i> <%= plant.days_until_water %> <%= "day".pluralize(plant.days_until_water) %> until water!</p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Water Anyway?", water_anyway_path(plant), method: :patch, class: "btn btn-primary modal-water-action" %>
+      </div>
+      <div class="modal-upl-delete">
+        <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+      </div>
+</div>

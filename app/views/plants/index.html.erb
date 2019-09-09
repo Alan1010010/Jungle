@@ -1,0 +1,30 @@
+<div class="banner-plants" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "banner-plants.jpg" %>);">
+  <div class="plants-header">
+    <h1 class="header-p">
+      Add a plant to your jungle
+    </h1>
+    <p>
+      Select the type of plant you would like to add
+    </p>
+    <div class="search-form">
+      <form action="/plants" method="get" class="form-inline my-2 my-lg-0">
+        <input name="navsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0 btn-primary" type="submit" ><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="plant-container">
+  <div class="plansts-header">
+    <h3 class= "h3-add">
+      Plant types:
+    </h3>
+    <% if current_user.user_plants.any? %>
+      <%= link_to "Visit jungle", user_plants_path, class: "btn btn-primary btn-sec btn-add" %>
+    <% end %>
+ </div>
+  <div class="cards">
+    <%= render './shared/plant-card' %>
+  </div>
+</div>

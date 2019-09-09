@@ -1,0 +1,53 @@
+
+.form-header {
+  text-align: center;
+  padding-bottom: 12px;
+  padding-top: 20px;
+}
+h2 {
+  text-align: center;
+}
+
+.form-inputs{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-control {
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgb(200,200,200)
+}
+
+.form-actions {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-actions input {
+  padding: 10px 15px;
+  background-color: rgb(200,200,200);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.form-actions input:hover {
+  background-color: rgb(170,170,170);
+  transition: 0.2s;
+}
+
+
+.form a {
+  color: rgb(20,20,20);
+  text-decoration: none;
+  padding: 11px 17px;
+  border: 1px solid rgb(200,200,200);
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.form a:hover {
+  text-decoration: none;
+  background-color: rgb(200,200,200);
+  transition: 0.2s;
+}
+

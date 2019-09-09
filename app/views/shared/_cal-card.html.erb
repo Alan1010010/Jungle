@@ -1,0 +1,27 @@
+<% sorted = plants.sort_by { |plant| plant.days_until_water} %>
+<% sorted.each do |plant| %>
+<% if plant.days_until_water <= 7 %>
+  <div class="cal-card-user cal-card">
+      <div class="date-container">
+      <p> <small><%= (Date.today + plant.days_until_water).strftime("%a") %></small> </p>
+      <h5> <%= (Date.today + plant.days_until_water).strftime("%e").to_i.ordinalize %></h5>
+      </div>
+        <div class="cal-photo-container">
+          <% if plant.photo.present? %>
+            <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill", class: "cal-photo" %>
+          <% else %>
+            <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill", class: "cal-photo" %>
+          <% end %>
+        </div>
+      <div class="cal-nickname">
+        <h7> <%= plant.nickname %></h7>
+      </div>
+      <div class="cal-water-container">
+        <%= image_tag "watering-can.png", alt: "watering can", class: "cal-water-logo" %>
+      </div>
+    </div>
+    <div class="week-border">
+
+    </div>
+    <% end %>
+<% end %>

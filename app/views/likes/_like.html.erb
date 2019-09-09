@@ -1,0 +1,9 @@
+<i class="fas fa-heart"></i>
+<span data-id=<%= activity.id %>>
+  <%= activity.votes_for.size %>
+</span>
+<% if current_user.voted_for? activity %>
+  <%= link_to "Unlike", unlike_path(activity), method: :post, remote: true %>
+<% else %>
+  <%= link_to "Like", like_path(activity), method: :post, remote: true %>
+<% end %>

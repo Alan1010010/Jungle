@@ -1,0 +1,50 @@
+.avatar-container {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.user-card-product-infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-user {
+ overflow: hidden;
+ width: 240px;
+ height: 80px;
+ background: white;
+ box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ display: flex;
+ align-items: center;
+ margin: 5px;
+ justify-content: space-between;
+}
+.card-user img {
+ height: 50px;
+ width: 50px;
+ object-fit: cover;
+ margin-right: 10px;
+}
+.card-user h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+.card-user p {
+ font-size: 12px;
+ line-height: 1.4;
+ opacity: .7;
+ margin-bottom: 0;
+ margin-top: 8px;
+}
+.follow-margin {
+  margin-right: 20px;
+}
+
+.follow-margin .btn {
+  font-size: .75rem;
+}
+
+

@@ -1,0 +1,19 @@
+<a href="/user_plants?user=<%= user.id %>">
+  <div class="card-user user-card">
+    <div class="avatar-container">
+      <span><%= render './shared/user-avatar-large', user: user %></span>
+      <div class="user-card-product-infos">
+        <div class="user-name">
+          <h5><small><%= user.firstname %> <%= user.lastname %></small></h5>
+        </div>
+      </div>
+    </div>
+    <div class="follow-margin">
+      <% if current_user.is_following?(user) %>
+        <%= link_to "Unfollow", unfollow_user_path(user), :method => :post, class: "btn btn-primary", remote: true %>
+      <% else %>
+        <%= link_to "Follow", follow_user_path(user), :method => :post, class: "btn btn-primary", remote: true %>
+      <% end %>
+    </div>
+  </div>
+</a>

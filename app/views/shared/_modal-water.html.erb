@@ -1,0 +1,63 @@
+<div class="modal info fade" id="modal-show<%= plant.id %>" tabindex="-1" role="dialog" aria-labelledby="Plant" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel"> <%= plant.nickname %></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-water-body">
+        <div class="modal-water-photo">
+          <% if plant.photo.present? %>
+            <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+          <% else %>
+            <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+          <% end %>
+        </div>
+        <div class="modal-water-right">
+          <div class="modal-water-name">
+            <h5><%= plant.plant.name %></h5>
+            <i>(<%= plant.plant.latin_name %>)</i>
+          </div>
+          <% if plant.needs_water? %>
+            <p><%= image_tag "watering-can.png", alt: "watering can", class: "cal-water-logo water-logo-time-to" %>It's time to water <%= plant.nickname %></p>
+            <%= link_to "Plant watered!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
+            <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
+
+        <% else %>
+          <%= render "shared/modal-info", plant: plant %>
+        <% end %>
+        </div>
+      </div>
+      <div class="modal-water-footer">
+        <div class="accordion" id="plantProperties">
+          <% if !plant.plant.light.nil? %>
+            <%= render 'plant-property', property: "Light", info: plant.plant.light %>
+          <% end %>
+          <% if !plant.plant.temperature.nil? %>
+            <%= render 'plant-property', property: "Temperature", info: plant.plant.temperature %>
+          <% end %>
+          <% if !plant.plant.watering.nil? %>
+            <%= render 'plant-property', property: "Watering", info: plant.plant.watering %>
+          <% end %>
+          <% if !plant.plant.soil.nil? %>
+            <%= render 'plant-property', property: "Soil", info: plant.plant.soil %>
+          <% end %>
+          <% if !plant.plant.re_potting.nil? %>
+            <%= render 'plant-property', property: "Re-potting", info: plant.plant.re_potting %>
+          <% end %>
+          <% if !plant.plant.level_of_care.nil? %>
+            <%= render 'plant-property', property: "Level of care", info: plant.plant.level_of_care %>
+          <% end %>
+          <% if !plant.plant.pruning.nil? %>
+            <%= render 'plant-property', property: "Pruning", info: plant.plant.pruning %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- { :controller => :user_plants, :action => :water_plant } -->

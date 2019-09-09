@@ -1,0 +1,10 @@
+// Import page-specific CSS files here.
+@import "home";
+@import "my_jungle";
+@import "user_show";
+@import "plants";
+@import "user-index";
+
+a:hover {
+  text-decoration: none;
+}

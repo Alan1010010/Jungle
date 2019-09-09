@@ -1,0 +1,18 @@
+<a href="#modal-show<%= plant.id %>" class="card-link" data-toggle="modal" data-target="#modal-show<%= plant.id %>">
+  <div class="card-plant">
+    <% if plant.photo.present? %>
+      <%= cl_image_tag plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+    <% else %>
+      <%= cl_image_tag plant.plant.photo, :width=>260, :height=>260, :gravity=>"auto", :crop=>"fill" %>
+    <% end %>
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= plant.nickname %></h2>
+        <p> Watered <%= plant.days_since_water %> <%=  "day".pluralize(plant.days_since_water) %> ago!</p>
+      </div>
+      <% if plant.needs_water? %>
+        <%= image_tag "watering-can.png", alt: "watering can", class: "water-logo" %>
+      <% end %>
+    </div>
+  </div>
+</a>

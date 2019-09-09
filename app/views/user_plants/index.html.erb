@@ -1,0 +1,73 @@
+<div class="banner-my-jungle" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "banner2.jpg" %>)">
+  <div class="jungle-header">
+    <% if current_user == @user %>
+    <h1>Your Jungle</h1>
+    <% else %>
+    <h1><%= @user.firstname %>'s Jungle</h1>
+    <% end %>
+  </div>
+</div>
+
+<div class="jungle-content">
+  <div class="seed-status-container">
+ </div>
+ <div class="underbanner">
+    <div class="chris-card">
+      <%= render './shared/user-avatar',user: @user %>
+      <div class="seed-status-text">
+        <%= link_to user_path(@user) do %>
+        <div class="uppercard">
+          <h6> <%= @user.firstname %></h6>
+          <span class="badge badge-pill badge-primary badge-jungle"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+        </div>
+        <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> | <%= @user.seeds %> seeds!</small></p>
+        <% end %>
+      </div>
+    </div>
+  <div class="btn-add-container">
+    <% if @user == current_user %>
+    <%= link_to "Add Plant", plants_path, class: "btn btn-primar btn-sec" %>
+    <% end %>
+    <div id='follow-unfollow'>
+      <%= render 'follow-unfollow' %>
+    </div>
+  </div>
+</div>
+<div class="jungle-plant-main-container">
+  <div class="jungle-plant-main-container-sub">
+    <div class="water-header">
+      <h4>
+        PLANTS THAT NEED WATER
+      </h4>
+    </div>
+    <% if @plants_to_water.empty? %>
+    <h6><em>Hooray nobody's thirsty!</em></h6>
+    <% end %>
+    <div class="jungle-card-container">
+      <% @plants_to_water.each do |plant| %>
+      <%= render 'shared/user-plant-card', plant: plant %>
+      <%= render './shared/modal-water', plant: plant %>
+      <% end %>
+
+    </div>
+    <h4>
+      PLANTS THAT ARE THRIVING
+    </h4>
+    <div class="jungle-card-container">
+      <% @plants_to_not_water.each do |plant| %>
+      <%= render 'shared/user-plant-card', plant: plant %>
+      <%= render './shared/modal-water', plant: plant %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="this-week-outer">
+    <div class="this-week-container">
+      <h6>COMING UP THIS WEEK</h6>
+      <%= render "./shared/cal-card", plants: @user_plants%>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>

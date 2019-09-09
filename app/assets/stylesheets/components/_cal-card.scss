@@ -1,0 +1,60 @@
+.cal-card {
+  margin: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cal-card h5 {
+  margin: 0;
+}
+
+.date-container {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.cal-card-user {
+ overflow: hidden;
+ height: 60px;
+ background: white;
+ // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ display: flex;
+ align-items: center;
+ margin-left: 0px;
+ padding-bottom: 10px;
+
+}
+.cal-photo-container {
+  height: 100%;
+}
+.cal-photo {
+    height: 60px;
+    width: 60px;
+    border-radius: 3px;
+}
+.cal-nickname {
+  flex-grow: 2;
+  padding-left: 10px;
+}
+.cal-card-user h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+}
+.cal-card-user p {
+ font-size: 12px;
+ line-height: 1.4;
+ opacity: .7;
+ margin-bottom: 0;
+ margin-top: 8px;
+}
+
+.cal-water-logo {
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: 10px;
+}
+.cal-water-container {
+
+}
+

@@ -1,0 +1,20 @@
+{
+  "name": "Plantis",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@rails/webpacker": "^4.0.7",
+    "bootstrap": "^4.3.1",
+    "flatpickr": "^4.6.2",
+    "fullcalendar": "^3.10.1",
+    "jquery": "^3.4.1",
+    "jquery-datetimepicker": "^2.5.21",
+    "moment": "^2.24.0",
+    "popper.js": "^1.15.0",
+    "sweetalert2": "^8.16.3"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.0"
+  }
+}

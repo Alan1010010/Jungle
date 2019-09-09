@@ -1,0 +1,76 @@
+// Specific CSS for your home-page
+
+body {
+  padding-top: 45px;
+  opacity: 0.9;
+}
+
+.banner {
+  width: 100%;
+  height: 600px;
+  // background-image: url("banner4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgb(100,100,100);
+}
+
+.home-header {
+  padding-top: 120px;
+  color: black;
+  text-shadow: none;
+  position: absolute;
+  left: 170px;
+  text-align: left;
+}
+
+.home-header h1 {
+  padding-bottom: 30px;
+}
+
+.home-header p {
+  margin-bottom: 0;
+}
+
+.btn-banner {
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.how-it-works-outer {
+  text-align: center
+}
+
+.how-it-works {
+  margin: 0 auto;
+  text-align: center;
+  width: 1130px;
+}
+
+.how-it-works h2 {
+ padding-top: 30px;
+}
+
+.home-cards {
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.home-card {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-image {
+  width: 100%;
+  max-height: 210px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,33 @@
+.modal-water-body {
+    display: flex;
+}
+
+.plant-property-header {
+    padding: 2px 5px !important;
+}
+
+.modal-water-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.modal-water-name {
+    text-align: center;
+
+    h5 {
+        margin-bottom: 2px;
+    }
+}
+
+.modal-water-footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.water-logo-time-to {
+    margin-bottom: 0px !important;
+    margin-right: 3px !important;
+}

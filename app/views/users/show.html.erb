@@ -1,0 +1,102 @@
+<div class="banner-my-seeds" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= image_path "seeds.jpg" %>)">
+  <div class="user-profile-header">
+
+      <%= cl_image_tag current_user.photo, :gravity=>"face", :width=>150, :height=>150, class: "avatar-profile" %>
+      <h1><%= @user.firstname%> <%= @user.lastname%></h1>
+  </div>
+  <div class="profile-content">
+    <div class="current-seeds">
+        <h3> Level : <%= @user.level %> | Seeds: <%= @user.seeds %></h3>
+        <div class="level">
+        </div>
+        <div class="user-badge-container">
+          <span class="badge badge-pill badge-primary badge-user-show"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
+        </div>
+        <br>
+          <div class="progress">
+            <div class="level-line" style="left: 6.6%">
+              <div class="label-txt">Lvl1</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 20%">
+              <div class="label-txt">Lvl2</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 40%">
+              <div class="label-txt">Lvl3</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 66.6%">
+              <div class="label-txt">Lvl4</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="level-line" style="left: 100%">
+              <div class="label-txt">Lvl5</div>
+              <div class="label-line"></div>
+            </div>
+            <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: <%= @user.seeds * 100 / 1500 %>%" aria-valuenow="<%= @user.seeds %>" aria-valuemin="0" aria-valuemax="1500"><% @user.seeds %></div>
+          </div>
+    </div>
+  </div>
+</div>
+<div class="content-block">
+  <div class="content-left">
+    <div class="leaderboard-header">
+      <h3>Leaderboard</h3>
+    </div>
+    <div class="leaderboard-content">
+      <% @users.first(10).each.with_index do |user, index| %>
+        <%= render 'shared/leaderboard-card', user: user, index: index %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content-right">
+    <div class="following-activity">
+      <h3>
+        Recent activity
+      </h3>
+      <div class="activity-content">
+        <% @activities.order(created_at: :desc).take(10).each do |activity| %>
+          <% next if activity.trackable.nil? %>
+            <% if activity.key == "user_plant.water_plant" %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> watered <%= activity.trackable.nickname %></div>
+            <% elsif activity.key == "user_plant.create" %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> added a <%= activity.trackable.plant.name %> named <%= activity.trackable.nickname %></div>
+            <% elsif activity.key == "follow.create" %>
+              <div><%= activity.owner.firstname + " " + activity.owner.lastname %> started following <%= activity.trackable.following.firstname + " " +  activity.trackable.following.lastname %></div>
+            <% else %>
+              <% next %>
+          <% end %>
+          <div class="likes">
+            <div class="activity-like" data-id=<%= activity.id %>>
+              <%= render "likes/like", activity:activity %>
+            </div>
+            <p>
+              <em><%= seconds_to_days(Time.now() - activity.created_at) %></em>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="discover">
+      <h3>Friends</h3>
+      <div class="user-cards-container">
+        <% @following_users.each do |user| %>
+          <div data-user=<%= user.id %>>
+            <%= render './shared/user-card', user: user %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="discover">
+      <h3>People you may know</h3>
+      <div class="user-cards-container">
+        <% @not_following_users.each do |user| %>
+          <div data-user=<%= user.id %>>
+            <%= render './shared/user-card', user: user %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
