@@ -5,8 +5,7 @@
   z-index: 9999;
   padding: 4px 8px;
   // background-color: #ECECEC;
-  background-color: $primary_color;
-
+  background-color: #F4F4F4;
   box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
 }
 
@@ -18,7 +17,7 @@
 }
 .navbar-lewagon {
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 110px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -30,37 +29,32 @@
 }
 
 .logo-txt {
-  font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
   margin-left: 10px;
-  color: #ECECEC;
+  color: black;
   // color: $primary_color;
 }
 
 .logo-txt-2 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
   margin-left: 10px;
   // color: #B5DDA4;
   color: white;
 }
 
 #logo {
-  font-size: 20px;
-  color: #ECECEC;
+  height: 2.2rem;
+  width: auto;
   // color: $primary_color;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
-#logo-2 {
-  font-size: 20px;
-  // color: #B5DDA4;
-  color: white;
-  margin-left: 10px;
-}
 
 #nav-left-side {
   display: flex;
+  align-items: center
 }
 
 #hover-pointer {
