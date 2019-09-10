@@ -9,13 +9,14 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-wrap:wrap;
   flex-direction: row;
   object-fit: cover;
   overflow: hidden;
 }
 .home-header {
   width: 50%;
-  height: 100vh;
+  height: 95vh;
   padding-top: 190px;
   padding-left: 140px;
   color: black;
@@ -26,18 +27,18 @@ body {
 
 .head-img-container {
   width: 50%;
-  height: 100vh;
+  height: 95vh;
 }
 
 .head-img {
   flex-basis: 50%;
-  height: 100%;
+  height: 95vh;
   width: auto;
   text-align: center;
 }
 
 
-.home-header h1 {
+.home-header-text {
   padding-bottom: 30px;
   font-size: 3.2rem;
 }
@@ -54,6 +55,7 @@ body {
 .how-it-works-title {
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .how-it-works-container-outer {
@@ -81,7 +83,8 @@ body {
 .hiw-img {
   height: 43.6875rem;
   width: auto;
-  right: 0px
+  right: 0px;
+  padding-right: 30px;
 }
 
 .hiw-text-container {
