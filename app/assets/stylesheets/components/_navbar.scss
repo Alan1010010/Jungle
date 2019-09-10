@@ -54,7 +54,14 @@
 
 #nav-left-side {
   display: flex;
-  align-items: center
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 #hover-pointer {
