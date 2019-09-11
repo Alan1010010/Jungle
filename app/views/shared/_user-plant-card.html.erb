@@ -11,7 +11,8 @@
         <p> Watered <%= plant.days_since_water %> <%=  "day".pluralize(plant.days_since_water) %> ago!</p>
       </div>
       <% if plant.needs_water? %>
-        <%= image_tag "watering-can.png", alt: "watering can", class: "water-logo" %>
+        <h4 class=water-logo>💧</h4>
+<!--         <%= image_tag "watering-can.png", alt: "watering can", class: "water-logo" %> -->
       <% end %>
     </div>
   </div>

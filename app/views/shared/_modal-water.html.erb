@@ -21,7 +21,8 @@
             <i>(<%= plant.plant.latin_name %>)</i>
           </div>
           <% if plant.needs_water? %>
-            <p><%= image_tag "watering-can.png", alt: "watering can", class: "cal-water-logo water-logo-time-to" %>It's time to water <%= plant.nickname %></p>
+            <p>It's time to water <%= plant.nickname %></p>
+            <p><%= image_tag "watering-can.png", alt: "watering can", class: "cal-water-logo water-logo-time-to" %></p>
             <%= link_to "Plant watered!", water_plant_path(plant), method: :patch, class: "btn btn-primary modal-water-action"  %>
             <p> <%= link_to "My plant has died", user_plant_path(plant), method: :delete, class: "btn btn-warning plant-died" %> </p>
 
