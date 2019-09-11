@@ -9,6 +9,10 @@
 
 .btn-sec {
   background-color: transparent !important;
-  color: $black !important;
-  border-color: $primary;
+  color: hsl(0, 0%, 27%) !important;
+  border-color: hsl(0, 0%, 27%) !important;
+}
+
+.btn-sec:hover {
+  background-color: hsl(0, 0%, 90%) !important;
 }
