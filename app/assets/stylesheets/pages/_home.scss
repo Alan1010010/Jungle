@@ -56,6 +56,12 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+
+
+}
+
+.how-it-works-title h1 {
+  font-size: 2rem;
 }
 
 .how-it-works-container-outer {
@@ -69,6 +75,7 @@ body {
   margin-top: 30px;
   display:flex;
   flex-direction: row;
+    background-color: hsl(0, 3%, 94%)
 
 }
 

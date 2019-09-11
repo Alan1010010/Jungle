@@ -4,7 +4,7 @@
       <div class="home-header">
         <h1 class="home-header-text"><strong>Houseplant killer?</strong></h1>
         <p>Jungle helps you look after your house plants by reminding you</p>
-        <p>when each plant is thirsty.</p>
+        <p>exactly when each plant is thirsty.</p>
         <% if user_signed_in? && current_user.user_plants.count > 0 %>
           <%= link_to 'Visit your jungle', user_plants_path, class: 'btn btn-primary btn-banner' %>
           <%= link_to 'Add to your jungle', plants_path, class: 'btn btn-primary btn-sec btn-banner' %>
@@ -19,6 +19,12 @@
       </div>
     </div>
 
+<!--     <div class="cards-users-container">
+      <div class="card-user">
+
+      </div>
+    </div> -->
+
     <div class="how-it-works-container-outer">
       <div class="how-it-works-content-wrap">
         <div class="hiw-img-container">
@@ -29,16 +35,16 @@
             <h1><strong>How it works</strong></h1>
           </div>
           <div class="create hiw-content">
-          <h4 class="hiw-titles">Create your Jungle</h4>
+          <h4 class="hiw-titles">🌴 Create your Jungle</h4>
               <p>Sign up and start adding plants to your personal jungle</p>
           </div>
           <div class="set hiw-content">
-              <h4 class="hiw-titles">Set goals</h4>
-              <p>Keep your plants alive by following your watering calendar</p>
+              <h4 class="hiw-titles">💧 We'll remind you when to water</h4>
+              <p>Keep your plants alive by following your personalised watering calendar</p>
           </div>
           <div class="earn hiw-content">
-              <h4 class="hiw-titles">Earn rewards</h4>
-              <p>Earn seeds and socialize with your fellow gardeners</p>
+              <h4 class="hiw-titles">👩‍🌾 Level up!</h4>
+              <p>Earn seeds to unlock rewards and challenge your fellow gardeners </p>
           </div>
         </div>
       </div>

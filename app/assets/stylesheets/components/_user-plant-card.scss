@@ -1,13 +1,12 @@
 .card-plant {
   overflow: hidden;
   background: white;
-  // box-shadow: 0 0 7px rgba(0,0,0,0.2);
-  min-width: 260px;
-  max-width: 260px;
-  margin: 23px;
-  border-radius: 3px;
-  border: solid 1px;
-  border-color: #CFCECC;
+  min-width: 210px;
+  max-width: 210px;
+  margin: 13px;
+  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
+  background-color: #F4F4F4;
+
 }
 
 .card-plant > img {
@@ -38,10 +37,9 @@
 }
 
 .water-logo {
-  position: absolute;
-  right: 13px;
-  bottom: 261px;
-  width: 64px;
+    position: absolute;
+    right: 15px;
+    bottom: 6px;
 }
 
 .card-link {
