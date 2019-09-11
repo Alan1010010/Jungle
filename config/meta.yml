@@ -2,5 +2,5 @@ meta_product_name: "Jungle"
 meta_title: "Jungle | For Houseplant Killers"
 meta_description: "Jungle helps you look after your house plants by reminding you
 when each plant is thirsty."
-meta_image: "cover.jpg" # should exist in `app/assets/images/`
+meta_image: "meta-image.png" # should exist in `app/assets/images/`
 # twitter_account: "@project-plantis"   # required for Twitter Cards
