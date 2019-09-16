@@ -19,11 +19,16 @@
       </div>
     </div>
 
-<!--     <div class="cards-users-container">
-      <div class="card-user">
-
+    <div class="discover">
+      <h3>Friends</h3>
+      <div class="user-cards-container">
+        <% @users.each do |user| %>
+          <div data-user=<%= user.id %>>
+            <%= render './shared/user-card', user: user %>
+          </div>
+        <% end %>
       </div>
-    </div> -->
+    </div>
 
     <div class="how-it-works-container-outer">
       <div class="how-it-works-content-wrap">

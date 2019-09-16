@@ -18,32 +18,19 @@
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  height: 160px;
 }
 
 .card-user h2 {
  font-size: 16px;
  font-weight: bold;
- margin: 0;
 }
 
-.badge-user-card {
+.card-user-badge {
   padding: 7px;
   font-size: 10px;
 }
 
-.card-user p {
- font-size: 12px;
- line-height: 1.4;
- opacity: .7;
- margin-bottom: 0;
- margin-top: 8px;
-}
-.follow-margin {
-  margin-right: 20px;
-}
-
-.follow-margin .btn {
+.card-user-follow .btn {
   font-size: .75rem;
 }
 
