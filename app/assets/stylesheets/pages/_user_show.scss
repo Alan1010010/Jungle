@@ -14,6 +14,13 @@
   font-size: 15px !important;
   border-color: $primary !important;
   padding: 7px !important;
+  color: white;
+  font-weight: normal;
+  text-shadow: none;
+  border: 1px solid white;
+  font-size: 18px;
+  position: absolute;
+  margin-left: 150px;
 }
 
 .user-cards-container {
@@ -55,14 +62,7 @@
 }
 
 .badge {
-  color: white;
-  font-weight: normal;
-  text-shadow: none;
-  border: 1px solid white;
-  font-size: 18px;
-  position: absolute;
-  margin-left: 150px;
-  padding: 5px;
+
 }
 
 .current-seeds {

@@ -1,37 +1,37 @@
-.avatar-container {
-  padding-left: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.user-card-product-infos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .card-user {
  overflow: hidden;
  width: 240px;
- height: 80px;
+ height: 240px;
  background: white;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- display: flex;
- align-items: center;
+  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
  margin: 5px;
- justify-content: space-between;
 }
-.card-user img {
- height: 50px;
- width: 50px;
- object-fit: cover;
- margin-right: 10px;
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:15px;
 }
+.card-lower-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  height: 160px;
+}
+
 .card-user h2 {
  font-size: 16px;
  font-weight: bold;
  margin: 0;
 }
+
+.badge-user-card {
+  padding: 7px;
+  font-size: 10px;
+}
+
 .card-user p {
  font-size: 12px;
  line-height: 1.4;
