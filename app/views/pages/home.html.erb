@@ -19,12 +19,12 @@
       </div>
     </div>
 
-    <div class="discover">
-      <h3>Friends</h3>
+    <div class="discover-container">
+      <h4><strong> Top Junglers</strong></h4>
       <div class="user-cards-container">
-        <% @users.each do |user| %>
+        <% @users.first(5).each do |user| %>
           <div data-user=<%= user.id %>>
-            <%= render './shared/user-card', user: user %>
+            <%= render './shared/user-card-home', user: user %>
           </div>
         <% end %>
       </div>

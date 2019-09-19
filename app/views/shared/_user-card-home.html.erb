@@ -1,0 +1,18 @@
+<a href="/user_plants?user=<%= user.id %>">
+  <div class="card-user user-card">
+    <div class="avatar-container">
+      <span><%= render './shared/user-avatar-large', user: user, class: "card-user-av" %></span>
+    </div>
+    <div class="card-lower-container">
+      <div class="user-name">
+        <h5><small><%= user.firstname %> <%= user.lastname %></small></h5>
+      </div>
+      <div class="card-user-badge-container">
+        <span class="badge badge-secondary card-user-badge"><%= user.badge %> <i class="fas fa-seedling"></i></span>
+      </div>
+      <div class="card-user-seeds">
+      <p><%= user.seeds %><i id="logo-card" class="fas fa-seedling"></i></p>
+      </div>
+    </div>
+  </div>
+</a>
