@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'pages#home'
   get 'user_plants/index'
   get 'user_plants/show'
   get 'users/show'
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
   namespace :user do
     root :to => "user_plants#index"
   end
-  root to: 'pages#home'
   resources :plants
   resources :user_plants
   resources :plant_types, only: [ :index, :show ]

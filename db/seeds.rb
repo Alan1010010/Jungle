@@ -295,7 +295,7 @@ jen = 'https://simpleweb.co.uk/wp-content/uploads/2019/04/deep-mind-jane-wang-ai
 henry_pic = 'https://www.techadvisor.co.uk/cmsdata/author/3636812/team_tech_advisor_03_thumb230.jpg'
 sophie_pic = 'https://www.iwill.org.uk/wp-content/uploads/2019/04/sophie-400x400.jpg'
 chris_pic = 'https://www.birmingham.ac.uk/Images/College-ArtsLaw-only/staff/english/mourant-chris-315-Cropped-230x230.jpg'
-sarah_pic = 'https://freedomhouse-files.s3.amazonaws.com/Repucci_Headshot_Photo_230px.jpg'
+sarah_pic = 'https://i.pinimg.com/originals/11/66/75/116675f0d91e3c3f09cadfada5e88239.jpg'
 paul_pic = 'https://opinionhall.com/wp-content/uploads/2018/07/weird-bug-makes-samsung-phones-text-random-photos-to-random-people.jpg'
 bobby_pic = 'http://ofad.org/files/daily-photo/recent-portraits-random-people-in-random-places_11.jpg'
 emily_pic = 'https://davidbruceblog.files.wordpress.com/2014/05/img_9760.jpg'
@@ -339,7 +339,7 @@ chris = User.create!(
 
 sarah = User.create!(
   firstname: 'Sarah',
-  lastname: 'Murphy',
+  lastname: 'Buxton',
   email: 'sarah@gmail.com',
   remote_photo_url: sarah_pic,
   password: 'London123',

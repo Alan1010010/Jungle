@@ -1,50 +1,54 @@
-.avatar-container {
-  padding-left: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.user-card-product-infos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .card-user {
  overflow: hidden;
- width: 240px;
- height: 80px;
+ min-width: 210px;
+ max-width: 240px;
+ height: 240px;
  background: white;
- box-shadow: 0 0 15px rgba(0,0,0,0.2);
- display: flex;
- align-items: center;
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.05rem rgba(0, 0, 0, 0.05);
  margin: 5px;
- justify-content: space-between;
 }
-.card-user img {
- height: 50px;
- width: 50px;
- object-fit: cover;
- margin-right: 10px;
+
+.card-user:hover {
+  background-color: hsl(110, 1%, 99%);
 }
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:20px;
+}
+.card-lower-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
 .card-user h2 {
  font-size: 16px;
  font-weight: bold;
- margin: 0;
-}
-.card-user p {
- font-size: 12px;
- line-height: 1.4;
- opacity: .7;
- margin-bottom: 0;
- margin-top: 8px;
-}
-.follow-margin {
-  margin-right: 20px;
 }
 
-.follow-margin .btn {
+.card-user-badge {
+  padding: 7px;
+  font-size: 10px;
+}
+
+.card-user-follow .btn {
   font-size: .75rem;
+}
+
+.card-user-seeds {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+#logo-card {
+  margin: 5px;
+  font-size: 11px;
+  color: $primary-color;
 }
 
 

@@ -52,12 +52,27 @@ body {
   margin-top: 30px;
 }
 
+.discover-container {
+  background-color: hsl(110, 2%, 98%);
+  padding: 0px 110px 60px 110px;
+}
+
+.header-junglers {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.user-cards-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
 .how-it-works-title {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-
-
 }
 
 .how-it-works-title h1 {
@@ -65,14 +80,13 @@ body {
 }
 
 .how-it-works-container-outer {
-  margin-top: 50px;
+  margin-top: 0px;
   background-color: rgba(95, 163, 81, 0.02);
   box-shadow: 0 -0.085rem rgba(0,0,0,0.02);
   border-radius: 3px;
 }
 
 .how-it-works-content-wrap {
-  margin-top: 30px;
   display:flex;
   flex-direction: row;
     background-color: hsl(0, 3%, 94%)

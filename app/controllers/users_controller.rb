@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   def index
     @users = policy_scope(User).order(seeds: :desc).where.not(id: current_user.id)
     @users = @users.search_by_firstname_and_lastname_and_email(params[:navsearch]) if params[:navsearch].present?
-
   end
 
   def show

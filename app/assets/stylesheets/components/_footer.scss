@@ -8,8 +8,6 @@
   height: 120px;
   width: 100%;
   background-color: rgb(230,230,230);
-  // background-color: $primary_color;
-  margin-top: 40px;
 }
 
 footer ul {
@@ -36,6 +34,8 @@ footer i:hover{
 .footer-txt {
   color: rgb(180,180,180);
   // color: #ECECEC;
-  text-align: center;
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
 }
