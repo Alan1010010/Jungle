@@ -1,16 +1,22 @@
 .card-user {
  overflow: hidden;
- width: 240px;
+ min-width: 210px;
+ max-width: 240px;
  height: 240px;
  background: white;
-  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.05rem rgba(0, 0, 0, 0.05);
  margin: 5px;
 }
+
+.card-user:hover {
+  background-color: hsl(110, 1%, 99%);
+}
+
 .avatar-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top:15px;
+  padding-top:20px;
 }
 .card-lower-container {
   display: flex;
@@ -32,6 +38,17 @@
 
 .card-user-follow .btn {
   font-size: .75rem;
+}
+
+.card-user-seeds {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+#logo-card {
+  margin: 5px;
+  font-size: 11px;
+  color: $primary-color;
 }
 
 
