@@ -34,9 +34,10 @@
           <div class="uppercard">
             <h6> <%= @user.firstname %></h6>
             <span class="badge badge-pill badge-primary badge-jungle"><%= @user.badge %> <i class="fas fa-seedling"></i></span>
-          </div>
-          <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %> | <%= @user.seeds %> seeds!</small></p>
+          <p> <small> <%= @user.followers.size %> <%= "follower".pluralize(@user.followers.size) %></small></p>
+           <p> <small><%= @user.seeds %> seeds</small></p>
           <% end %>
+          </div>
         </div>
       </div>
 
