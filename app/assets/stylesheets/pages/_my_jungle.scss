@@ -18,9 +18,13 @@
   padding: 30px;
 }
 
+.jungle-body {
+  margin-bottom: 30px;
+}
+
 .jungle-content {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 110px;
+  margin-right: 110px;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -46,20 +50,20 @@
 
 .right-container {
   width: 20%;
+  overflow: hidden;
 }
 
 .chris-card {
   overflow: hidden;
   background: white;
   // box-shadow: 0 0 7px rgba(0,0,0,0.2);
-  min-width: 260px;
   border-radius: 3px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
   display:flex;
   padding: 15px 15px 0px 15px;
   margin-top: -3px;
   margin-bottom: 15px;
-    background-color: hsl(108, 2%, 98%);
+    background-color: #F4F4F4;
 
 }
 
@@ -93,7 +97,7 @@ a {
   padding: 15px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
   background-color: hsl(108, 2%, 98%);
   min-width: 260px;
 }
