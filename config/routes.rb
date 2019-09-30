@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
+  get 'pages/ebook'
   get 'user_plants/index'
   get 'user_plants/show'
   get 'users/show'
