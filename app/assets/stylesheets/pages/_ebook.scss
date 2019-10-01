@@ -6,5 +6,47 @@
 }
 
 .btn-buy {
-  width: 100px;
+  width: 150px;
+  font-size: 0.8rem ;
+}
+
+.card-ebook {
+  overflow: hidden;
+  background: white;
+  min-width: 210px;
+  max-width: 210px;
+  margin: 0px 13px 26px 13px;
+  box-shadow: 0.05rem 0.05rem 0.1rem 0.05rem rgba(0, 0, 0, 0.05);
+  background-color: #F4F4F4;
+
+}
+
+.card-ebook > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-ebook h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.card-ebook p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+
+.card-ebook-infos {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }

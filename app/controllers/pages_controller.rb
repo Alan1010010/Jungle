@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :ebook]
 
   def home
      @users = policy_scope(User).order(seeds: :desc)
