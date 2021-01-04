@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '2.6.6'
 
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
@@ -7,10 +7,11 @@ gem 'bootsnap', require: false
 gem "devise", ">= 4.7.1"
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
-gem 'puma'
+gem 'puma', '4.2.1'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'pg_search'
+gem 'stripe'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

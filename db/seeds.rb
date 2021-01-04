@@ -6,7 +6,7 @@ puts 'Creating plants...'
 
 # Plant seeds with img urls
 
-spider = 'https://cdn.nurserylive.com/images/stories/virtuemart/product/resized/nurserylive-chlorophytum-spider-plant-dark-green-1082_600x600.jpg'
+spider = 'https://images.immediate.co.uk/production/volatile/sites/10/2018/08/c8d01d86-da6a-44e8-ac2b-8eaa0358e8bf-ed06cc9.jpg?quality=45&resize=960,640'
 aloe = 'https://static.turbosquid.com/Preview/2014/07/11__09_40_14/nmodel_02_53_02.jpgad975979-8feb-4877-9514-b275351e1544Original.jpg'
 lily = 'https://assets.bakker.com/ProductPics/560x676/41996-01-BAKI_20190429115731.jpg'
 fig = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/81/pl2000028196.jpg?width=940&height=940'
@@ -18,13 +18,13 @@ alu = 'https://mypassiflora.com/wp-content/uploads/2019/02/20190207_093811.jpg'
 dumb = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/35/pl2000033597.jpg?width=940&height=940'
 panda = 'https://images-na.ssl-images-amazon.com/images/I/71qrJSpYXLL._SX425_.jpg'
 swiss = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/27/pl2000032789.jpg?width=940&height=940'
-velvet = 'https://pics.davesgarden.com/pics/2006/08/30/ceejaytown/795aae.jpg'
+velvet = 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/27/pl2000032789.jpg?width=940&height=940'
 peruviana = 'https://www.plantthefuture.com/wp-content/uploads/2018/10/Peruvianus.png'
-bunny = 'https://www.giromagi.com/prodotti/src/rebutia_pseudoperbella_3071.jpg'
+bunny = 'https://www.plantthefuture.com/wp-content/uploads/2018/10/Peruvianus.png'
 barrel = 'https://www.worldseedsupply.com/wp-content/uploads/1970/01/170597_107886169289992_2059048_o.jpg'
 boston = 'https://img.crocdn.co.uk/images/products2/pl/20/00/02/77/pl2000027735.jpg?width=940&height=940'
 donkey = 'https://images.immediate.co.uk/production/volatile/sites/10/2018/08/c8d01d86-da6a-44e8-ac2b-8eaa0358e8bf-ed06cc9.jpg?quality=45&resize=960,640'
-fly_trap = 'https://cdn.nurserylive.com/images/stories/virtuemart/product/resized/nurserylive-venus-flytrap-dionaea-muscipula-plant_600x600.jpg'
+fly_trap = 'https://images.immediate.co.uk/production/volatile/sites/10/2018/08/c8d01d86-da6a-44e8-ac2b-8eaa0358e8bf-ed06cc9.jpg?quality=45&resize=960,640'
 cool = 'https://www.alchimiaweb.com/blog/wp-content/uploads/2011/02/planta-acabada-de-trasplantar-a-11l.jpg'
 umbrella = 'https://asepsis-kenya.com/wp-content/uploads/2018/12/scheffella-plant.jpg'
 
@@ -296,7 +296,7 @@ henry_pic = 'https://www.techadvisor.co.uk/cmsdata/author/3636812/team_tech_advi
 sophie_pic = 'https://www.iwill.org.uk/wp-content/uploads/2019/04/sophie-400x400.jpg'
 chris_pic = 'https://www.birmingham.ac.uk/Images/College-ArtsLaw-only/staff/english/mourant-chris-315-Cropped-230x230.jpg'
 sarah_pic = 'https://i.pinimg.com/originals/11/66/75/116675f0d91e3c3f09cadfada5e88239.jpg'
-paul_pic = 'https://opinionhall.com/wp-content/uploads/2018/07/weird-bug-makes-samsung-phones-text-random-photos-to-random-people.jpg'
+paul_pic = 'http://ofad.org/files/daily-photo/recent-portraits-random-people-in-random-places_10.jpg'
 bobby_pic = 'http://ofad.org/files/daily-photo/recent-portraits-random-people-in-random-places_11.jpg'
 emily_pic = 'https://davidbruceblog.files.wordpress.com/2014/05/img_9760.jpg'
 holly_pic = 'https://66.media.tumblr.com/19f2f3b46ea47fcf9b65bd625a344b63/tumblr_pfem20SnjX1xuhbodo5_250.png'
@@ -451,5 +451,25 @@ jimmy_planty = UserPlant.create!(
     remote_photo_url: u_spider_plant,
     user: chris
 )
+
+# Seeding subscription plan structure
+  Plan.create(
+    title: "Pro",
+    base_price: 99,
+    description: "This is a great plan",
+  )
+
+    Plan.create(
+    title: 'Business',
+    base_price: 299,
+    description: "This is a great plan",
+  )
+
+      Plan.create(
+    title: 'Premium',
+    base_price: 499,
+    description: "This is a great plan",
+  )
+
 
 puts 'Finished!'

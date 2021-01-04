@@ -25,4 +25,8 @@ Rails.application.routes.draw do
   post "like/:id", to: "likes#like", as: 'like'
   post "unlike/:id", to: "likes#unlike", as: 'unlike'
   patch "water-anyway/:id", to: "user_plants#water_anyway", as: :water_anyway
+  # Subscription plan
+  resources :plans, only: [:index, :show]
+  # Stripe hooks
+  post "stripe", to: 'webhooks#stripe'
 end

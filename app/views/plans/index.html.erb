@@ -1,0 +1,19 @@
+<div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+     <% @plans.each do |plan| %>
+      <div class='<%=plan.title %>'>
+        <div class="pricing-plan">
+          <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class='<%=plan.title %>'>
+          <h2 class="pricing-header"> <%= link_to plan.title, plan_path(plan) %> </h2>
+          <span class="pricing-price"> <%= plan.base_price %> </span>
+          <p> <%= link_to "SaaS me", plan_path(plan), class: 'pricing-button' %> </p>
+        </div>
+     </div>
+    <% end  %>
+    </div>
+      <form method="POST" action="/create_customer_portal_session">
+        <button type="submit">Manage billing</button>
+      </form>
+  </div>
+</div>

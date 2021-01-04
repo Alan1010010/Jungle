@@ -142,7 +142,7 @@ GEM
       activerecord (>= 3.0)
       i18n (>= 0.5.0)
       railties (>= 3.0.0)
-    puma (4.3.5)
+    puma (4.2.1)
       nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
@@ -210,6 +210,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stripe (5.28.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -256,7 +257,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   public_activity
-  puma
+  puma (= 4.2.1)
   pundit
   rails (= 5.2.3)
   redis
@@ -264,12 +265,13 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  stripe
   uglifier
   web-console (>= 3.3.0)
   webpacker
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.6p146
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
