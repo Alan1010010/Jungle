@@ -34,7 +34,6 @@ class UserPlantsController < ApplicationController
       else
         redirect_to plants_path
       end
-
     authorize @user_plant
   end
 

@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   resources :plans, only: [:index, :show]
   # Stripe hooks
   post "stripe", to: 'webhooks#stripe'
+
 end

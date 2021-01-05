@@ -4,5 +4,9 @@ class PlanPolicy < ApplicationPolicy
       scope.all
     end
 
+    def show?
+      true
+    end
+
   end
 end
